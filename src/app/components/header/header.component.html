@@ -1,0 +1,31 @@
+<p>Módulo de Administración</p>
+
+<h1>Administración de usuarios</h1>
+
+<div class="header">
+	<div class="header-filters">
+		<mat-form-field>
+			<mat-label>Seleccione un Departamento</mat-label>
+
+			<mat-select>
+				@for (food of foods; track $index) {
+					<mat-option [value]="food.value">
+						{{ food.viewValue }}
+					</mat-option>
+				}
+			</mat-select>
+		</mat-form-field>
+
+		<mat-form-field>
+			<mat-label>Seleccione un Cargo</mat-label>
+
+			<mat-select>
+				<mat-option *ngFor="let food of foods" [value]="food.value">
+					{{ food.viewValue }}
+				</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
+
+	<button mat-stroked-button color="primary">Crear nuevo usuario</button>
+</div>
