@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-filters {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+.titles {
+    margin-bottom: 15px;
+    
+    p,
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        color: #919AAB;
+    }
+
+    h1 {
+        color: #435370;
+    }
+}

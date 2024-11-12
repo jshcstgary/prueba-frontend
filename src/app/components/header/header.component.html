@@ -1,6 +1,8 @@
-<p>Módulo de Administración</p>
+<div class="titles">
+	<p>Módulo de Administración</p>
 
-<h1>Administración de usuarios</h1>
+	<h1>Administración de usuarios</h1>
+</div>
 
 <div class="header">
 	<div class="header-filters">
@@ -8,9 +10,9 @@
 			<mat-label>Seleccione un Departamento</mat-label>
 
 			<mat-select>
-				@for (food of foods; track $index) {
-					<mat-option [value]="food.value">
-						{{ food.viewValue }}
+				@for (departamento of departamentos; track $index) {
+					<mat-option [value]="departamento.id">
+						{{ departamento.nombre }}
 					</mat-option>
 				}
 			</mat-select>
@@ -20,12 +22,14 @@
 			<mat-label>Seleccione un Cargo</mat-label>
 
 			<mat-select>
-				<mat-option *ngFor="let food of foods" [value]="food.value">
-					{{ food.viewValue }}
-				</mat-option>
+				@for (cargo of cargos; track $index) {
+					<mat-option [value]="cargo.id">
+						{{ cargo.nombre }}
+					</mat-option>
+				}
 			</mat-select>
 		</mat-form-field>
 	</div>
 
-	<button mat-stroked-button color="primary">Crear nuevo usuario</button>
+	<button mat-flat-button color="primary">Crear nuevo usuario</button>
 </div>
