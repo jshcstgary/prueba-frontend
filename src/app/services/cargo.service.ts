@@ -8,10 +8,10 @@ import { Observable } from "rxjs";
 	providedIn: "root"
 })
 export class CargoService {
-	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}`;
+	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}/api`;
 
 	private _cargos: Cargo[] = [];
-	
+
 	constructor(private http: HttpClient) { }
 
 	set cargos(cargos: Cargo[]) {

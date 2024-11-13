@@ -8,10 +8,10 @@ import { Observable } from "rxjs";
 	providedIn: "root"
 })
 export class DepartamentoService {
-	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}`;
-	
+	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}/api`;
+
 	private _departamentos: Departamento[] = [];
-	
+
 	constructor(private http: HttpClient) { }
 
 	set departamentos(departamentos: Departamento[]) {
@@ -21,7 +21,7 @@ export class DepartamentoService {
 	get departamentos() {
 		return this._departamentos;
 	}
-	
+
 	public getDepartamentos(): Observable<Response<Departamento[]>> {
 		return this.http.get<Response<Departamento[]>>(`${this.url}/departamentos`);
 	}

@@ -8,8 +8,8 @@ import { Observable } from "rxjs";
 	providedIn: "root"
 })
 export class UserService {
-	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}`;
-	
+	private url: string = `${ENVIRONMENT.BASE_URL}:${ENVIRONMENT.PORT}/api`;
+
 	constructor(private http: HttpClient) { }
 
 	public getUsers(): Observable<Response<User[]>> {

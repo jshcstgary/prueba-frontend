@@ -5,3 +5,16 @@ table {
 .main {
 	padding: 35px;
 }
+
+.table-header {
+	font-weight: bold;
+}
+
+.table-footer {
+	font-weight: bold;
+}
+
+.table-action-buttons {
+	display: flex;
+	gap: 5px;
+}
